@@ -16,10 +16,9 @@ public class Shop extends Abstract {
     private final static By FUNNY_COW = By.xpath("//td[normalize-space()='Funny Cow']");
     private final static By FLUFFY_BUNNY = By.xpath("//td[normalize-space()='Fluffy Bunny']");
 
-    private int stuffedDog = 1;
-    private int fluffyBunny = 2;
-    private int valentineBear = 3;
-
+    private final static int stuffedDog = 1;
+    private final static int fluffyBunny = 2;
+    private final static int valentineBear = 3;
 
     public Shop(WebDriver driver) {
         super(driver);

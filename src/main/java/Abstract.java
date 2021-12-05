@@ -1,10 +1,8 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class Abstract {
@@ -42,9 +40,6 @@ public class Abstract {
     }
 
     public void checkItemSubtotal(int xpathNo, float amount) {
-
-
-
             String priceString = driver.findElement(By.xpath("//tbody/tr[" + xpathNo + "]/td[2]")).getText();
             String priceStringNo$ = priceString.replace("$", "");
             double priceDouble = Double.parseDouble(priceStringNo$);
@@ -57,5 +52,4 @@ public class Abstract {
             System.out.println(actualSubtotal + " " + expectedSubtotal);
             Assert.assertEquals(actualSubtotal, expectedSubtotal);
         }
-
 }
